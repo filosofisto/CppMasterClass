@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++14 -g
+CXXFLAGS = -std=c++17 -g
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 EXEC = app
@@ -9,7 +9,7 @@ all: $(EXEC)
 $(EXEC): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-%.o: %.cpp %.h
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:

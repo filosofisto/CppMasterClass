@@ -1,8 +1,8 @@
 CXX = g++
-CXXFLAGS = -std=c++14 -g
+CXXFLAGS = -std=c++20 -g
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
-EXEC = app
+EXEC = mydaemon
 
 all: $(EXEC)
 

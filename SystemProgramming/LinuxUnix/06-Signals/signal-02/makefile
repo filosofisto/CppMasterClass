@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -std=c++20 -g
-LDFLAGS = -lfmt
+CXXFLAGS = -std=c++23 -g
+LDFLAGS = 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 EXEC = app

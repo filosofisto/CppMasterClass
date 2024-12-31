@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
+#include <print>
 #include <unistd.h>
 
 using namespace std;
 
 void print_process_info(const string& label, pid_t pid, pid_t ppid)
 {
-    cout << "[" << label << "] " << "My Pid:     " << pid << '\n';
-    cout << "[" << label << "] " << "Parent Pid: " << ppid << '\n';
+    println("[{}] My PID:     {}", label, pid);
+    println("[{}] Parent PID: {}", label, ppid);
 }
 
 int main()

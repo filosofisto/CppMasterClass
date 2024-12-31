@@ -14,7 +14,7 @@ void print_process_info(const string& label, pid_t pid, pid_t ppid)
 int main()
 {
     switch (fork()) {
-        case 1:
+        case 0:
             cout << "Child created with success\n";
             print_process_info("Child", getpid(), getppid());
             cout << "Finalizing child\n";

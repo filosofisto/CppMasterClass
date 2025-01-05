@@ -2,7 +2,6 @@
 #include <print>
 #include <unistd.h>
 #include <sys/types.h>
-#include <grp.h>
 
 using namespace std;
 

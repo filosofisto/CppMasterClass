@@ -22,7 +22,24 @@ If ommit -Wl,-rpath then to execute the app we need to do it with the bellow com
 -rpath : This tells the linker to embed a runtime search path inside the executable          
          At runtime, the dynamic linker (ld-linux) uses this path to look for .so files before using default locations (like /usr/lib).
 
+If you place your .so in one of these folders, it will always be found:
+
+    /lib
+    /usr/lib
+    /lib64
+    /usr/lib64
+    /usr/local/lib (common for user-installed libraries)
+
+After placing your .so there, you may also need to run:
+
+sudo ldconfig
+
+This updates the linker’s cache (/etc/ld.so.cache) so it includes the new library.
+
 ### Utility
+
+    ldd app
+    // To show the reference to the library
 
     file libhypernex_math.so
     // libhypernex_math.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=d9d66a0c232afd3fd1cac79cbaedd6bea8355e64, not stripped

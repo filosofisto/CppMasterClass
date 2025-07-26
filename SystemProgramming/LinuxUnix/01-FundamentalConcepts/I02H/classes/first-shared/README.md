@@ -8,7 +8,9 @@
     g++ -fPIC -c math/sub_vector.cpp build/sub_vector.o
     g++ -shared -o build/libhypernex_math.so build/add_vector.o build/sub_vector.o
 
-PIC stands for Position Independent Code.
+PIC: Position Independent Code
+ELF: Executable and Linkable Format
+     It’s the standard binary format for executables, object files, shared libraries (.so), and core dumps on Unix-like systems (Linux, BSD, etc.)
 
 ### Build App (app):
 

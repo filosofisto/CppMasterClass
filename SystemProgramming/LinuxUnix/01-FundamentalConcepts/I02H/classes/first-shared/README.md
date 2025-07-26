@@ -8,6 +8,8 @@
     g++ -fPIC -c math/sub_vector.cpp build/sub_vector.o
     g++ -shared -o build/libhypernex_math.so build/add_vector.o build/sub_vector.o
 
+PIC stands for Position Independent Code.
+
 ### Build App (app):
 
     g++ app/main.cpp -Imath -Lbuild -lhypernex_math -o build/app -Wl,-rpath=./build

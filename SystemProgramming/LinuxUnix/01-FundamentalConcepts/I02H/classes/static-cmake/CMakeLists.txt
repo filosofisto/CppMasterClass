@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
-project(HelloLibrary)
+project(StaticCmake)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(hello)
+add_subdirectory(math)
 add_subdirectory(app)
 
-include(GNUInstallDirs)
 
